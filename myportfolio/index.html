@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>K Vigneshwaran Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .projects .card:hover {
+      transform: scale(1.02);
+      transition: 0.2s;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 15px;
+      background: #222;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #444;
+    }
+
+    footer {
+      text-align: center;
+      background: #222;
+      color: white;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>K Vigneshwaran</h1>
+  <p>Computer Science Engineering Student</p>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I am a Computer Science Engineering student at Dhaanish Ahmed College of Engineering, Chennai.
+      I am passionate about coding, problem solving, and building projects.
+      I am also interested in game development and learning Japanese.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="card">
+    <ul>
+      <li>HTML & CSS</li>
+      <li>JavaScript (Basics)</li>
+      <li>Python Programming</li>
+      <li>Problem Solving</li>
+      <li>Game Development (Beginner)</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>JLPT N5 Vocabulary Trainer</h3>
+    <p>Web application to learn Japanese vocabulary easily.</p>
+    <a href="jlpt trainer.html">View Project</a>
+  </div>
+
+  <div class="card">
+    <h3>Simple Calculator</h3>
+    <p>Basic calculator built using HTML, CSS and JavaScript.</p>
+    <a href="calculator.html">View Project</a>
+  </div>
+
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+
+  <div class="card">
+    <form onsubmit="return validate()">
+      <input type="text" id="name" placeholder="Your Name">
+      <input type="email" id="email" placeholder="Your Email">
+      <textarea id="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+
+    <p><b>Email:</b> vigneshwaran2006csc@gmail.com</p>
+    <p><b>GitHub:</b> Vigneshwaran-cse</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 K Vigneshwaran</p>
+</footer>
+
+<script>
+function validate() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+
+  if(name === "" || email === "" || message === "") {
+    alert("Please fill all fields");
+    return false;
+  }
+
+  if(!email.includes("@")) {
+    alert("Enter valid email");
+    return false;
+  }
+
+  alert("Message sent successfully!");
+  return true;
+}
+</script>
+
+</body>
+</html>
